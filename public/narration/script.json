@@ -1,0 +1,110 @@
+[
+  {
+    "file": "bubble-1.wav",
+    "text": "Let’s start with three numbers: 8, 3, and 5."
+  },
+  {
+    "file": "bubble-2.wav",
+    "text": "Compare the first two elements, 8 and 3."
+  },
+  {
+    "file": "bubble-3.wav",
+    "text": "8 is greater than 3. Swap the first two."
+  },
+  {
+    "file": "bubble-4.wav",
+    "text": "Now compare the second and third elements."
+  },
+  {
+    "file": "bubble-5.wav",
+    "text": "8 is greater than 5. Swap those two elements."
+  },
+  {
+    "file": "bubble-6.wav",
+    "text": "Compare 3 and 5. They are already in order."
+  },
+  {
+    "file": "bubble-7.wav",
+    "text": "The array is sorted. Highlight all three elements."
+  },
+  {
+    "file": "array-1.wav",
+    "text": "Create an array with 4, 7, 2, and 9."
+  },
+  {
+    "file": "array-2.wav",
+    "text": "Highlight the first element. Its index is zero."
+  },
+  {
+    "file": "array-3.wav",
+    "text": "Insert 6 at the second position."
+  },
+  {
+    "file": "array-4.wav",
+    "text": "Delete the third element, which is now 7."
+  },
+  {
+    "file": "array-5.wav",
+    "text": "Highlight the largest number, 9."
+  },
+  {
+    "file": "stack-1.wav",
+    "text": "Create a stack with 2 at the bottom and 4 on top."
+  },
+  {
+    "file": "stack-2.wav",
+    "text": "Push 8 onto the stack."
+  },
+  {
+    "file": "stack-3.wav",
+    "text": "Push 5. It becomes the new top."
+  },
+  {
+    "file": "stack-4.wav",
+    "text": "Pop the stack. 5 leaves first."
+  },
+  {
+    "file": "stack-5.wav",
+    "text": "The top is now 8. Highlight it."
+  },
+  {
+    "file": "queue-1.wav",
+    "text": "Create a queue with 3, 5, and 8."
+  },
+  {
+    "file": "queue-2.wav",
+    "text": "Enqueue 2. It joins at the rear."
+  },
+  {
+    "file": "queue-3.wav",
+    "text": "Dequeue. 3 leaves from the front."
+  },
+  {
+    "file": "queue-4.wav",
+    "text": "Dequeue again. This time 5 leaves."
+  },
+  {
+    "file": "queue-5.wav",
+    "text": "8 is now at the front. Highlight it."
+  },
+  {
+    "file": "linked-1.wav",
+    "text": "Create a linked list with 10, 20, and 30."
+  },
+  {
+    "file": "linked-2.wav",
+    "text": "Visit the head node, 10."
+  },
+  {
+    "file": "linked-3.wav",
+    "text": "Insert 15 after the first node."
+  },
+  {
+    "file": "linked-4.wav",
+    "text": "Delete the second node. Connect 10 back to 20."
+  },
+  {
+    "file": "linked-5.wav",
+    "text": "Visit the last node, 30. Its next pointer is null."
+  }
+]

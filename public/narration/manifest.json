@@ -1,0 +1,539 @@
+{
+  "engine": "Microsoft Edge neural TTS",
+  "voices": {
+    "aria": "en-US-AriaNeural",
+    "guy": "en-US-GuyNeural"
+  },
+  "clips": {
+    "aria/bubble-3.mp3": {
+      "duration": 4.68,
+      "bytes": 28080,
+      "text_sha256": "12f7bdd55dbeac566d1ed4bc78772b795470ff2f0db8bdfb6cd38a4115d0891c"
+    },
+    "aria/bubble-1.mp3": {
+      "duration": 4.68,
+      "bytes": 28080,
+      "text_sha256": "63fa8afe17cf40c5a2c825215d21f39da4098050bad8288f647b9863b394bac2"
+    },
+    "aria/bubble-2.mp3": {
+      "duration": 3.576,
+      "bytes": 21456,
+      "text_sha256": "842c61be4f1f698cb868992b1bf2eda6fb92701c0668bc53e96c637c2185b51f"
+    },
+    "aria/bubble-4.mp3": {
+      "duration": 3.456,
+      "bytes": 20736,
+      "text_sha256": "e9f430f42bc87724994313193e72e842e0393ecd2c710602f71fe86938943c8b"
+    },
+    "aria/bubble-5.mp3": {
+      "duration": 5.064,
+      "bytes": 30384,
+      "text_sha256": "96f1154fd61892726fad9e37ff8b550188b3227833c1283946aa553480590eba"
+    },
+    "aria/bubble-6.mp3": {
+      "duration": 4.8,
+      "bytes": 28800,
+      "text_sha256": "d9bb8ee9b609b260242fdc411253632e7c2e5ec6a58e89eaea4c3a98c1dc105b"
+    },
+    "aria/array-1.mp3": {
+      "duration": 4.392,
+      "bytes": 26352,
+      "text_sha256": "93aa681dc402507431cfa67dae3734a76d3b68b1fa534096f76a130d3e971e8f"
+    },
+    "aria/bubble-7.mp3": {
+      "duration": 4.8,
+      "bytes": 28800,
+      "text_sha256": "33e1004705516386b0c54588b30266ab92e95fa89e980787055a4eb8a986255c"
+    },
+    "aria/array-2.mp3": {
+      "duration": 4.896,
+      "bytes": 29376,
+      "text_sha256": "d18ccbdcb4449d0ac1305f085a851ecd92eef04252c89591edddaf6f4e8709b4"
+    },
+    "aria/array-3.mp3": {
+      "duration": 3.168,
+      "bytes": 19008,
+      "text_sha256": "b343d13d24ffa44444778ff3af779f3759c5eaad57f82a1e8bef80e034857ff7"
+    },
+    "aria/array-4.mp3": {
+      "duration": 3.552,
+      "bytes": 21312,
+      "text_sha256": "c232303aaa73a0dc92c9d9ca04f8c63dc639bad7adb27e3130817466aba738f6"
+    },
+    "aria/array-5.mp3": {
+      "duration": 3.216,
+      "bytes": 19296,
+      "text_sha256": "99e7112e255f548bc4bb24f518523b5526e051a7b6955a15ce659652748a9f2e"
+    },
+    "aria/stack-2.mp3": {
+      "duration": 2.448,
+      "bytes": 14688,
+      "text_sha256": "31be7234fdfca51589ff47dc4e8477756c48dc6a8da39651954b455589140c51"
+    },
+    "aria/stack-1.mp3": {
+      "duration": 4.056,
+      "bytes": 24336,
+      "text_sha256": "4a7cc1a17bd7843cae363231837fc4aa0833d9aff58744448b28d8536f68e2c4"
+    },
+    "aria/stack-3.mp3": {
+      "duration": 4.272,
+      "bytes": 25632,
+      "text_sha256": "d44db26282c1de1c3e82663e832d9c156f6a656eb0c8a865e8fb2a0081443f40"
+    },
+    "aria/stack-4.mp3": {
+      "duration": 4.272,
+      "bytes": 25632,
+      "text_sha256": "7200da0f143e02fd6ce733f7591aeaa49ae2ed6495eab76f669d538a9156e1ca"
+    },
+    "aria/stack-5.mp3": {
+      "duration": 4.056,
+      "bytes": 24336,
+      "text_sha256": "ed2de92d3c2dae5c236ce6a5eb11a23a79d9b5bc4cb09d2586d16832dd9cf838"
+    },
+    "aria/queue-1.mp3": {
+      "duration": 3.768,
+      "bytes": 22608,
+      "text_sha256": "8f2c4cc49ae8a651bb6bfcf719712c17fac284cd8ae985180b70feb8853b6f31"
+    },
+    "aria/queue-3.mp3": {
+      "duration": 3.96,
+      "bytes": 23760,
+      "text_sha256": "fcb92f182bc0999c7e124f53b1560d5d380b696a8503a031268c885408794be4"
+    },
+    "aria/queue-2.mp3": {
+      "duration": 4.152,
+      "bytes": 24912,
+      "text_sha256": "8fcadcb054590062d75685e68a90fb38edb866ecf0f303ff899ab106691bb287"
+    },
+    "aria/queue-4.mp3": {
+      "duration": 4.416,
+      "bytes": 26496,
+      "text_sha256": "141442e01309d243e4c04874da53eda29c32e79c30b2d087bfc0c07b5e475bd6"
+    },
+    "aria/queue-5.mp3": {
+      "duration": 4.08,
+      "bytes": 24480,
+      "text_sha256": "4ffaf97ea1aa5306f7b0f54e9a8c05f81ccdd4fa0a05f5c2aa5d5174e70716c7"
+    },
+    "aria/linked-1.mp3": {
+      "duration": 4.2,
+      "bytes": 25200,
+      "text_sha256": "56f72e446d183245539e3bf73265760760639ff8cea23235292fbbf41e094e51"
+    },
+    "aria/linked-2.mp3": {
+      "duration": 2.736,
+      "bytes": 16416,
+      "text_sha256": "cbe38a87cf8b84056109e37a0471c0af1aec03fc17d42b906895238bc3ed91a7"
+    },
+    "aria/linked-4.mp3": {
+      "duration": 4.968,
+      "bytes": 29808,
+      "text_sha256": "a41b95c0f2346ab58fd395af4cfa7ff407b9bb4e29ddd4d0901ff857e0108a4c"
+    },
+    "aria/linked-3.mp3": {
+      "duration": 3.216,
+      "bytes": 19296,
+      "text_sha256": "2e8e94265316a14c33254aa6ed33bb7e7cd8323890a19051a07750e8681ce4b3"
+    },
+    "aria/linked-5.mp3": {
+      "duration": 5.328,
+      "bytes": 31968,
+      "text_sha256": "d7237344acbdfed29fce2ce74e5b0d83e2c458dc48633a5a09cfa053c926a12a"
+    },
+    "aria/architecture-valid-2.mp3": {
+      "duration": 7.944,
+      "bytes": 47664,
+      "text_sha256": "7990e06b6a2276a80489b7e66a1e04df868068171e6fe09860690429b2079d12"
+    },
+    "aria/architecture-valid-1.mp3": {
+      "duration": 7.008,
+      "bytes": 42048,
+      "text_sha256": "b1929b69c98158cac72e442e0520f63c697372bd0bcdca9e12ef8a0cc92a4d15"
+    },
+    "aria/architecture-valid-3.mp3": {
+      "duration": 8.232,
+      "bytes": 49392,
+      "text_sha256": "ea3fca1c24503300836345d4ad311a1a3a8bf8f0885e6778024337104cc36807"
+    },
+    "aria/architecture-valid-5.mp3": {
+      "duration": 8.736,
+      "bytes": 52416,
+      "text_sha256": "70c6aa33af29c5622ee1981327a4997358fc227dc9c5bed6003c67280fb590b3"
+    },
+    "aria/architecture-valid-6.mp3": {
+      "duration": 8.832,
+      "bytes": 52992,
+      "text_sha256": "79e3a8845320a124cb595889e944b0ee78de21982a69a7b003783f66a5f6be9e"
+    },
+    "aria/architecture-valid-4.mp3": {
+      "duration": 8.976,
+      "bytes": 53856,
+      "text_sha256": "fe35616230cfeb76c46056e3770a925d9320a0ec3d78ec1d944f93f60e687693"
+    },
+    "aria/architecture-valid-7.mp3": {
+      "duration": 8.472,
+      "bytes": 50832,
+      "text_sha256": "9ec101abdbfc3568e2f02b29a86ea7df564ffd46837e5d7bcfa890720f039a42"
+    },
+    "aria/architecture-valid-8.mp3": {
+      "duration": 8.688,
+      "bytes": 52128,
+      "text_sha256": "b4a0dead3851483ec151767942af238583b519b4044b1197e4e997ee1f4225ec"
+    },
+    "aria/architecture-error-1.mp3": {
+      "duration": 8.4,
+      "bytes": 50400,
+      "text_sha256": "0ec129db24de620868bb16580c3ec27c5ae27c24abe62e75ded0c70bafc54755"
+    },
+    "aria/architecture-error-2.mp3": {
+      "duration": 8.088,
+      "bytes": 48528,
+      "text_sha256": "96f750e17cf10077dbec78a2014142e871c63aaf55cf35d6bf24f54273870fa5"
+    },
+    "aria/architecture-error-3.mp3": {
+      "duration": 8.328,
+      "bytes": 49968,
+      "text_sha256": "109f1d623fa0d32a70738314da4b34ab685342a441c1a0dffb2fa2cf8ce9ba15"
+    },
+    "aria/architecture-error-4.mp3": {
+      "duration": 8.736,
+      "bytes": 52416,
+      "text_sha256": "e6999270a502011d22024b9b9fc990da201ee9866affa2aff169ded8842d671b"
+    },
+    "aria/architecture-error-5.mp3": {
+      "duration": 8.568,
+      "bytes": 51408,
+      "text_sha256": "54c06c80993c4e0882506a04d2516549c84986f53b6735e4895d053c02f1a8ac"
+    },
+    "aria/architecture-error-6.mp3": {
+      "duration": 8.064,
+      "bytes": 48384,
+      "text_sha256": "f6be1894085fc681b13c3c466e105c87bcce1c4b5c495f1669585ee554fdc345"
+    },
+    "aria/architecture-error-7.mp3": {
+      "duration": 7.392,
+      "bytes": 44352,
+      "text_sha256": "638783cf92e570ff5e411f9717d738418092d36e74b54f8baeb8c118d07d7a71"
+    },
+    "aria/architecture-error-8.mp3": {
+      "duration": 5.472,
+      "bytes": 32832,
+      "text_sha256": "52e94befce424d860a5ba7bde490ae2c8c557ed1405a56f5c325287cc59cf7ea"
+    },
+    "aria/water-1.mp3": {
+      "duration": 7.248,
+      "bytes": 43488,
+      "text_sha256": "b4204a59a10c3e07554018db1f6d2cf883c7737e1131c93843248c428c861cd0"
+    },
+    "aria/architecture-error-9.mp3": {
+      "duration": 8.952,
+      "bytes": 53712,
+      "text_sha256": "0dbb562101651a7febbdea22faed1054336ee70ea03720de6f02142ad9a572f6"
+    },
+    "aria/water-2.mp3": {
+      "duration": 7.656,
+      "bytes": 45936,
+      "text_sha256": "1cdbde26792363710b9179c4e5acef60dbb14c44d7f7957e31857f6a747f5dcb"
+    },
+    "aria/water-4.mp3": {
+      "duration": 7.368,
+      "bytes": 44208,
+      "text_sha256": "b729514037273af1b335f2bf964918a31ea6eaa7a48822fc149396ecd061a023"
+    },
+    "aria/water-3.mp3": {
+      "duration": 8.088,
+      "bytes": 48528,
+      "text_sha256": "684070b38308bf226e4290cc1fd25ed8e6ef6471ee97e1ff4b1690c26a142ed3"
+    },
+    "aria/water-5.mp3": {
+      "duration": 8.52,
+      "bytes": 51120,
+      "text_sha256": "faba94c618ff06c14263cda9677d5aabb018fc0f87b8c431f9d3799349990ea5"
+    },
+    "aria/water-6.mp3": {
+      "duration": 8.256,
+      "bytes": 49536,
+      "text_sha256": "c578115a3f2302afdad935fca93f815af7340ee104339e17493c7727b553b674"
+    },
+    "aria/water-8.mp3": {
+      "duration": 6.936,
+      "bytes": 41616,
+      "text_sha256": "7db728b08e6d5415c0742c4bc8fdb2ff2dc19dcf5d8b0b3c88a1941d20c23d6b"
+    },
+    "aria/water-7.mp3": {
+      "duration": 8.064,
+      "bytes": 48384,
+      "text_sha256": "8595cb7c5c3458696c2f7a8824c36ff7c24bdb1d5811ae928a1ba9e6d2d22dc7"
+    },
+    "aria/water-9.mp3": {
+      "duration": 11.088,
+      "bytes": 66528,
+      "text_sha256": "041811d4698e8584a654c0d5b235409930c8e66eaff2f56b74333c611c1d9a6c"
+    },
+    "guy/bubble-1.mp3": {
+      "duration": 4.392,
+      "bytes": 26352,
+      "text_sha256": "63fa8afe17cf40c5a2c825215d21f39da4098050bad8288f647b9863b394bac2"
+    },
+    "guy/bubble-2.mp3": {
+      "duration": 3.624,
+      "bytes": 21744,
+      "text_sha256": "842c61be4f1f698cb868992b1bf2eda6fb92701c0668bc53e96c637c2185b51f"
+    },
+    "guy/bubble-3.mp3": {
+      "duration": 4.752,
+      "bytes": 28512,
+      "text_sha256": "12f7bdd55dbeac566d1ed4bc78772b795470ff2f0db8bdfb6cd38a4115d0891c"
+    },
+    "guy/bubble-4.mp3": {
+      "duration": 3.456,
+      "bytes": 20736,
+      "text_sha256": "e9f430f42bc87724994313193e72e842e0393ecd2c710602f71fe86938943c8b"
+    },
+    "guy/bubble-5.mp3": {
+      "duration": 5.016,
+      "bytes": 30096,
+      "text_sha256": "96f1154fd61892726fad9e37ff8b550188b3227833c1283946aa553480590eba"
+    },
+    "guy/bubble-6.mp3": {
+      "duration": 4.92,
+      "bytes": 29520,
+      "text_sha256": "d9bb8ee9b609b260242fdc411253632e7c2e5ec6a58e89eaea4c3a98c1dc105b"
+    },
+    "guy/bubble-7.mp3": {
+      "duration": 4.776,
+      "bytes": 28656,
+      "text_sha256": "33e1004705516386b0c54588b30266ab92e95fa89e980787055a4eb8a986255c"
+    },
+    "guy/array-1.mp3": {
+      "duration": 4.128,
+      "bytes": 24768,
+      "text_sha256": "93aa681dc402507431cfa67dae3734a76d3b68b1fa534096f76a130d3e971e8f"
+    },
+    "guy/array-3.mp3": {
+      "duration": 3.192,
+      "bytes": 19152,
+      "text_sha256": "b343d13d24ffa44444778ff3af779f3759c5eaad57f82a1e8bef80e034857ff7"
+    },
+    "guy/array-2.mp3": {
+      "duration": 4.944,
+      "bytes": 29664,
+      "text_sha256": "d18ccbdcb4449d0ac1305f085a851ecd92eef04252c89591edddaf6f4e8709b4"
+    },
+    "guy/array-4.mp3": {
+      "duration": 3.528,
+      "bytes": 21168,
+      "text_sha256": "c232303aaa73a0dc92c9d9ca04f8c63dc639bad7adb27e3130817466aba738f6"
+    },
+    "guy/array-5.mp3": {
+      "duration": 3.072,
+      "bytes": 18432,
+      "text_sha256": "99e7112e255f548bc4bb24f518523b5526e051a7b6955a15ce659652748a9f2e"
+    },
+    "guy/stack-2.mp3": {
+      "duration": 2.496,
+      "bytes": 14976,
+      "text_sha256": "31be7234fdfca51589ff47dc4e8477756c48dc6a8da39651954b455589140c51"
+    },
+    "guy/stack-1.mp3": {
+      "duration": 3.936,
+      "bytes": 23616,
+      "text_sha256": "4a7cc1a17bd7843cae363231837fc4aa0833d9aff58744448b28d8536f68e2c4"
+    },
+    "guy/stack-3.mp3": {
+      "duration": 4.272,
+      "bytes": 25632,
+      "text_sha256": "d44db26282c1de1c3e82663e832d9c156f6a656eb0c8a865e8fb2a0081443f40"
+    },
+    "guy/stack-5.mp3": {
+      "duration": 3.984,
+      "bytes": 23904,
+      "text_sha256": "ed2de92d3c2dae5c236ce6a5eb11a23a79d9b5bc4cb09d2586d16832dd9cf838"
+    },
+    "guy/stack-4.mp3": {
+      "duration": 4.224,
+      "bytes": 25344,
+      "text_sha256": "7200da0f143e02fd6ce733f7591aeaa49ae2ed6495eab76f669d538a9156e1ca"
+    },
+    "guy/queue-1.mp3": {
+      "duration": 3.552,
+      "bytes": 21312,
+      "text_sha256": "8f2c4cc49ae8a651bb6bfcf719712c17fac284cd8ae985180b70feb8853b6f31"
+    },
+    "guy/queue-2.mp3": {
+      "duration": 4.368,
+      "bytes": 26208,
+      "text_sha256": "8fcadcb054590062d75685e68a90fb38edb866ecf0f303ff899ab106691bb287"
+    },
+    "guy/queue-3.mp3": {
+      "duration": 4.224,
+      "bytes": 25344,
+      "text_sha256": "fcb92f182bc0999c7e124f53b1560d5d380b696a8503a031268c885408794be4"
+    },
+    "guy/queue-4.mp3": {
+      "duration": 4.368,
+      "bytes": 26208,
+      "text_sha256": "141442e01309d243e4c04874da53eda29c32e79c30b2d087bfc0c07b5e475bd6"
+    },
+    "guy/queue-5.mp3": {
+      "duration": 4.176,
+      "bytes": 25056,
+      "text_sha256": "4ffaf97ea1aa5306f7b0f54e9a8c05f81ccdd4fa0a05f5c2aa5d5174e70716c7"
+    },
+    "guy/linked-1.mp3": {
+      "duration": 3.984,
+      "bytes": 23904,
+      "text_sha256": "56f72e446d183245539e3bf73265760760639ff8cea23235292fbbf41e094e51"
+    },
+    "guy/linked-2.mp3": {
+      "duration": 2.856,
+      "bytes": 17136,
+      "text_sha256": "cbe38a87cf8b84056109e37a0471c0af1aec03fc17d42b906895238bc3ed91a7"
+    },
+    "guy/linked-3.mp3": {
+      "duration": 3.144,
+      "bytes": 18864,
+      "text_sha256": "2e8e94265316a14c33254aa6ed33bb7e7cd8323890a19051a07750e8681ce4b3"
+    },
+    "guy/linked-4.mp3": {
+      "duration": 4.944,
+      "bytes": 29664,
+      "text_sha256": "a41b95c0f2346ab58fd395af4cfa7ff407b9bb4e29ddd4d0901ff857e0108a4c"
+    },
+    "guy/linked-5.mp3": {
+      "duration": 5.496,
+      "bytes": 32976,
+      "text_sha256": "d7237344acbdfed29fce2ce74e5b0d83e2c458dc48633a5a09cfa053c926a12a"
+    },
+    "guy/architecture-valid-1.mp3": {
+      "duration": 7.008,
+      "bytes": 42048,
+      "text_sha256": "b1929b69c98158cac72e442e0520f63c697372bd0bcdca9e12ef8a0cc92a4d15"
+    },
+    "guy/architecture-valid-2.mp3": {
+      "duration": 7.632,
+      "bytes": 45792,
+      "text_sha256": "7990e06b6a2276a80489b7e66a1e04df868068171e6fe09860690429b2079d12"
+    },
+    "guy/architecture-valid-4.mp3": {
+      "duration": 8.784,
+      "bytes": 52704,
+      "text_sha256": "fe35616230cfeb76c46056e3770a925d9320a0ec3d78ec1d944f93f60e687693"
+    },
+    "guy/architecture-valid-3.mp3": {
+      "duration": 8.136,
+      "bytes": 48816,
+      "text_sha256": "ea3fca1c24503300836345d4ad311a1a3a8bf8f0885e6778024337104cc36807"
+    },
+    "guy/architecture-valid-7.mp3": {
+      "duration": 8.16,
+      "bytes": 48960,
+      "text_sha256": "9ec101abdbfc3568e2f02b29a86ea7df564ffd46837e5d7bcfa890720f039a42"
+    },
+    "guy/architecture-valid-5.mp3": {
+      "duration": 8.496,
+      "bytes": 50976,
+      "text_sha256": "70c6aa33af29c5622ee1981327a4997358fc227dc9c5bed6003c67280fb590b3"
+    },
+    "guy/architecture-valid-6.mp3": {
+      "duration": 8.472,
+      "bytes": 50832,
+      "text_sha256": "79e3a8845320a124cb595889e944b0ee78de21982a69a7b003783f66a5f6be9e"
+    },
+    "guy/architecture-valid-8.mp3": {
+      "duration": 8.52,
+      "bytes": 51120,
+      "text_sha256": "b4a0dead3851483ec151767942af238583b519b4044b1197e4e997ee1f4225ec"
+    },
+    "guy/architecture-error-2.mp3": {
+      "duration": 7.992,
+      "bytes": 47952,
+      "text_sha256": "96f750e17cf10077dbec78a2014142e871c63aaf55cf35d6bf24f54273870fa5"
+    },
+    "guy/architecture-error-1.mp3": {
+      "duration": 8.04,
+      "bytes": 48240,
+      "text_sha256": "0ec129db24de620868bb16580c3ec27c5ae27c24abe62e75ded0c70bafc54755"
+    },
+    "guy/architecture-error-3.mp3": {
+      "duration": 7.872,
+      "bytes": 47232,
+      "text_sha256": "109f1d623fa0d32a70738314da4b34ab685342a441c1a0dffb2fa2cf8ce9ba15"
+    },
+    "guy/architecture-error-4.mp3": {
+      "duration": 8.28,
+      "bytes": 49680,
+      "text_sha256": "e6999270a502011d22024b9b9fc990da201ee9866affa2aff169ded8842d671b"
+    },
+    "guy/architecture-error-5.mp3": {
+      "duration": 8.352,
+      "bytes": 50112,
+      "text_sha256": "54c06c80993c4e0882506a04d2516549c84986f53b6735e4895d053c02f1a8ac"
+    },
+    "guy/architecture-error-6.mp3": {
+      "duration": 7.704,
+      "bytes": 46224,
+      "text_sha256": "f6be1894085fc681b13c3c466e105c87bcce1c4b5c495f1669585ee554fdc345"
+    },
+    "guy/architecture-error-7.mp3": {
+      "duration": 7.104,
+      "bytes": 42624,
+      "text_sha256": "638783cf92e570ff5e411f9717d738418092d36e74b54f8baeb8c118d07d7a71"
+    },
+    "guy/architecture-error-8.mp3": {
+      "duration": 5.232,
+      "bytes": 31392,
+      "text_sha256": "52e94befce424d860a5ba7bde490ae2c8c557ed1405a56f5c325287cc59cf7ea"
+    },
+    "guy/water-1.mp3": {
+      "duration": 7.08,
+      "bytes": 42480,
+      "text_sha256": "b4204a59a10c3e07554018db1f6d2cf883c7737e1131c93843248c428c861cd0"
+    },
+    "guy/architecture-error-9.mp3": {
+      "duration": 8.568,
+      "bytes": 51408,
+      "text_sha256": "0dbb562101651a7febbdea22faed1054336ee70ea03720de6f02142ad9a572f6"
+    },
+    "guy/water-2.mp3": {
+      "duration": 7.608,
+      "bytes": 45648,
+      "text_sha256": "1cdbde26792363710b9179c4e5acef60dbb14c44d7f7957e31857f6a747f5dcb"
+    },
+    "guy/water-4.mp3": {
+      "duration": 7.08,
+      "bytes": 42480,
+      "text_sha256": "b729514037273af1b335f2bf964918a31ea6eaa7a48822fc149396ecd061a023"
+    },
+    "guy/water-3.mp3": {
+      "duration": 7.416,
+      "bytes": 44496,
+      "text_sha256": "684070b38308bf226e4290cc1fd25ed8e6ef6471ee97e1ff4b1690c26a142ed3"
+    },
+    "guy/water-5.mp3": {
+      "duration": 7.992,
+      "bytes": 47952,
+      "text_sha256": "faba94c618ff06c14263cda9677d5aabb018fc0f87b8c431f9d3799349990ea5"
+    },
+    "guy/water-6.mp3": {
+      "duration": 8.016,
+      "bytes": 48096,
+      "text_sha256": "c578115a3f2302afdad935fca93f815af7340ee104339e17493c7727b553b674"
+    },
+    "guy/water-7.mp3": {
+      "duration": 8.136,
+      "bytes": 48816,
+      "text_sha256": "8595cb7c5c3458696c2f7a8824c36ff7c24bdb1d5811ae928a1ba9e6d2d22dc7"
+    },
+    "guy/water-8.mp3": {
+      "duration": 6.768,
+      "bytes": 40608,
+      "text_sha256": "7db728b08e6d5415c0742c4bc8fdb2ff2dc19dcf5d8b0b3c88a1941d20c23d6b"
+    },
+    "guy/water-9.mp3": {
+      "duration": 10.512,
+      "bytes": 63072,
+      "text_sha256": "041811d4698e8584a654c0d5b235409930c8e66eaff2f56b74333c611c1d9a6c"
+    }
+  }
+}

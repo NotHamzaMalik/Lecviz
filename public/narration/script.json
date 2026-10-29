@@ -1,110 +1,214 @@
 [
   {
-    "file": "bubble-1.wav",
+    "file": "bubble-1.mp3",
     "text": "Let’s start with three numbers: 8, 3, and 5."
   },
   {
-    "file": "bubble-2.wav",
+    "file": "bubble-2.mp3",
     "text": "Compare the first two elements, 8 and 3."
   },
   {
-    "file": "bubble-3.wav",
+    "file": "bubble-3.mp3",
     "text": "8 is greater than 3. Swap the first two."
   },
   {
-    "file": "bubble-4.wav",
+    "file": "bubble-4.mp3",
     "text": "Now compare the second and third elements."
   },
   {
-    "file": "bubble-5.wav",
+    "file": "bubble-5.mp3",
     "text": "8 is greater than 5. Swap those two elements."
   },
   {
-    "file": "bubble-6.wav",
+    "file": "bubble-6.mp3",
     "text": "Compare 3 and 5. They are already in order."
   },
   {
-    "file": "bubble-7.wav",
+    "file": "bubble-7.mp3",
     "text": "The array is sorted. Highlight all three elements."
   },
   {
-    "file": "array-1.wav",
+    "file": "array-1.mp3",
     "text": "Create an array with 4, 7, 2, and 9."
   },
   {
-    "file": "array-2.wav",
+    "file": "array-2.mp3",
     "text": "Highlight the first element. Its index is zero."
   },
   {
-    "file": "array-3.wav",
+    "file": "array-3.mp3",
     "text": "Insert 6 at the second position."
   },
   {
-    "file": "array-4.wav",
+    "file": "array-4.mp3",
     "text": "Delete the third element, which is now 7."
   },
   {
-    "file": "array-5.wav",
+    "file": "array-5.mp3",
     "text": "Highlight the largest number, 9."
   },
   {
-    "file": "stack-1.wav",
+    "file": "stack-1.mp3",
     "text": "Create a stack with 2 at the bottom and 4 on top."
   },
   {
-    "file": "stack-2.wav",
+    "file": "stack-2.mp3",
     "text": "Push 8 onto the stack."
   },
   {
-    "file": "stack-3.wav",
+    "file": "stack-3.mp3",
     "text": "Push 5. It becomes the new top."
   },
   {
-    "file": "stack-4.wav",
+    "file": "stack-4.mp3",
     "text": "Pop the stack. 5 leaves first."
   },
   {
-    "file": "stack-5.wav",
+    "file": "stack-5.mp3",
     "text": "The top is now 8. Highlight it."
   },
   {
-    "file": "queue-1.wav",
+    "file": "queue-1.mp3",
     "text": "Create a queue with 3, 5, and 8."
   },
   {
-    "file": "queue-2.wav",
+    "file": "queue-2.mp3",
     "text": "Enqueue 2. It joins at the rear."
   },
   {
-    "file": "queue-3.wav",
+    "file": "queue-3.mp3",
     "text": "Dequeue. 3 leaves from the front."
   },
   {
-    "file": "queue-4.wav",
+    "file": "queue-4.mp3",
     "text": "Dequeue again. This time 5 leaves."
   },
   {
-    "file": "queue-5.wav",
+    "file": "queue-5.mp3",
     "text": "8 is now at the front. Highlight it."
   },
   {
-    "file": "linked-1.wav",
+    "file": "linked-1.mp3",
     "text": "Create a linked list with 10, 20, and 30."
   },
   {
-    "file": "linked-2.wav",
+    "file": "linked-2.mp3",
     "text": "Visit the head node, 10."
   },
   {
-    "file": "linked-3.wav",
+    "file": "linked-3.mp3",
     "text": "Insert 15 after the first node."
   },
   {
-    "file": "linked-4.wav",
+    "file": "linked-4.mp3",
     "text": "Delete the second node. Connect 10 back to 20."
   },
   {
-    "file": "linked-5.wav",
+    "file": "linked-5.mp3",
     "text": "Visit the last node, 30. Its next pointer is null."
+  },
+  {
+    "file": "architecture-valid-1.mp3",
+    "text": "Let’s follow one instruction through the system. The teacher says, swap the first two numbers."
+  },
+  {
+    "file": "architecture-valid-2.mp3",
+    "text": "The microphone sends audio to the Python backend. Whisper turns the speech into recognized text."
+  },
+  {
+    "file": "architecture-valid-3.mp3",
+    "text": "The language model identifies the intent. It produces a structured swap event for positions zero and one."
+  },
+  {
+    "file": "architecture-valid-4.mp3",
+    "text": "Validation checks the schema, confidence, and current scene. Both positions exist, so this event can continue."
+  },
+  {
+    "file": "architecture-valid-5.mp3",
+    "text": "The accepted event crosses to the frontend scene manager. It applies the swap in order, preserving the rest of the scene."
+  },
+  {
+    "file": "architecture-valid-6.mp3",
+    "text": "The renderer selects a reusable SVG or Canvas template. The two elements move smoothly to their new positions."
+  },
+  {
+    "file": "architecture-valid-7.mp3",
+    "text": "The animated diagram reaches the classroom display. The teacher’s explanation and the visible change stay connected."
+  },
+  {
+    "file": "architecture-valid-8.mp3",
+    "text": "The teacher can pause, undo, or correct an operation. Undo restores the earlier scene through the scene manager."
+  },
+  {
+    "file": "architecture-error-1.mp3",
+    "text": "Now follow the uncertain-event path. The teacher says, delete the fifth node, but only three nodes exist."
+  },
+  {
+    "file": "architecture-error-2.mp3",
+    "text": "Whisper transcribes the sentence. Recognizing the words does not yet mean the instruction is safe to apply."
+  },
+  {
+    "file": "architecture-error-3.mp3",
+    "text": "The intent parser proposes deleting index four. The proposed event still needs to be checked against the scene."
+  },
+  {
+    "file": "architecture-error-4.mp3",
+    "text": "Validation finds that index four does not exist. The event is rejected before anything on the whiteboard changes."
+  },
+  {
+    "file": "architecture-error-5.mp3",
+    "text": "Error handling withholds the uncertain event and sends it to the teacher for correction. The original scene stays intact."
+  },
+  {
+    "file": "architecture-error-6.mp3",
+    "text": "The teacher corrects the instruction to delete the third node. The correction is checked again before it is accepted."
+  },
+  {
+    "file": "architecture-error-7.mp3",
+    "text": "The scene manager applies the corrected, valid event. The list now contains ten and twenty."
+  },
+  {
+    "file": "architecture-error-8.mp3",
+    "text": "The template renderer removes the third node and reconnects the remaining diagram."
+  },
+  {
+    "file": "architecture-error-9.mp3",
+    "text": "The corrected diagram is displayed. A mistaken instruction was caught, corrected, and applied without corrupting the scene."
+  },
+  {
+    "file": "water-1.mp3",
+    "text": "Let’s follow a drop of water. The sun warms the lake and provides energy for the water cycle."
+  },
+  {
+    "file": "water-2.mp3",
+    "text": "Some liquid water changes into water vapor and moves into the air. This process is evaporation."
+  },
+  {
+    "file": "water-3.mp3",
+    "text": "As moist air cools, water vapor condenses into tiny droplets. These droplets form a cloud."
+  },
+  {
+    "file": "water-4.mp3",
+    "text": "When droplets grow large enough, water falls back to Earth as rain. This is precipitation."
+  },
+  {
+    "file": "water-5.mp3",
+    "text": "Water flows downhill over the land, into streams, and back toward the lake. This movement is surface runoff."
+  },
+  {
+    "file": "water-6.mp3",
+    "text": "Some water also soaks into the soil. It can replenish groundwater, which moves slowly beneath the surface."
+  },
+  {
+    "file": "water-7.mp3",
+    "text": "Now let’s use an illustrative rainfall graph. On our first example day, ten millimeters of rain fell."
+  },
+  {
+    "file": "water-8.mp3",
+    "text": "On day two, thirty millimeters fell. That is three times the rainfall on day one."
+  },
+  {
+    "file": "water-9.mp3",
+    "text": "Day three brought twenty millimeters. These made-up values total sixty millimeters over three days, showing how a spoken explanation can build a graph."
   }
 ]

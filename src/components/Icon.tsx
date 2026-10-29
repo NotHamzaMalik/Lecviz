@@ -1,5 +1,8 @@
 import type { CSSProperties } from 'react';
 const paths: Record<string, string> = {
+  flow: 'M9 3h6v5H9ZM2 16h6v5H2Zm14 0h6v5h-6ZM12 8v4M5 16v-4h14v4',
+  shield: 'm12 2 9 4v6q-1 7-9 10-8-3-9-10V6Zm-4 10 3 3 5-6',
+  drop: 'M12 2S4 11 4 16a8 8 0 0 0 16 0c0-5-8-14-8-14ZM8 16q0 4 4 4',
   volume: 'M11 5 6 9H2v6h4l5 4ZM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14',
   muted: 'M11 5 6 9H2v6h4l5 4ZM16 9l6 6M22 9l-6 6',
   play: 'm9 5 11 7-11 7Z', pause: 'M8 5v14M16 5v14', next: 'm5 5 10 7-10 7ZM19 5v14', back: 'm19 5-10 7 10 7ZM5 5v14',

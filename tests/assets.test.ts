@@ -1,18 +1,24 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { examples } from '../src/scene/engine.ts';
+import { createHash } from 'node:crypto';
+import { lessons, voices } from '../src/demo/lessons.ts';
 
-test('both voices have nonempty WAV audio matching every example sentence', () => {
+test('both neural voices have complete MP3 narration matching all lesson scripts', () => {
   const directory = new URL('../public/narration/', import.meta.url);
   const script = JSON.parse(readFileSync(new URL('script.json', directory), 'utf8'));
-  const expected = examples.flatMap(example => example.steps.map((step, index) => ({ file: `${example.id}-${index + 1}.wav`, text: step.text })));
+  const expected = lessons.flatMap(lesson => lesson.steps.map((step, index) => ({ file: `${lesson.id}-${index + 1}.mp3`, text: step.text })));
+  const manifest = JSON.parse(readFileSync(new URL('manifest.json', directory), 'utf8'));
   assert.deepEqual(script, expected);
-  for (const voice of ['david', 'zira']) for (const line of expected) {
-    const wav = readFileSync(new URL(`${voice}/${line.file}`, directory));
-    assert.equal(wav.subarray(0, 4).toString(), 'RIFF');
-    assert.equal(wav.subarray(8, 12).toString(), 'WAVE');
-    assert.ok(wav.length > 10000, `${voice}/${line.file} contains audio`);
+  assert.equal(Object.keys(manifest.clips).length, expected.length * voices.length);
+  for (const voice of voices) for (const line of expected) {
+    const path = `${voice.id}/${line.file}`;
+    const mp3 = readFileSync(new URL(path, directory));
+    assert.ok(mp3.subarray(0, 3).toString() === 'ID3' || (mp3[0] === 255 && (mp3[1] & 224) === 224), `${path} has a valid MPEG header`);
+    assert.ok(mp3.length > 10000, `${path} contains audio`);
+    assert.equal(manifest.clips[path].bytes, mp3.length);
+    assert.equal(manifest.clips[path].text_sha256, createHash('sha256').update(line.text).digest('hex'));
+    assert.ok(manifest.clips[path].duration > 1);
   }
 });
 

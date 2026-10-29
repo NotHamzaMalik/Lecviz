@@ -1,58 +1,56 @@
-# LecViz showcase — based on Mindstream
+# LecViz showcase
 
-A focused frontend prototype for presenting speech-driven classroom visualization. It adapts Mindstream's React/Vite layout, theme mechanism, transcript panel, grouped controls, and browser speech hook. The full Next.js/FastAPI product is not part of this prototype.
+A presentation-ready React/Vite prototype adapted from Mindstream. Three views demonstrate the classroom experience, the proposed system architecture, and a lesson outside computing.
 
-## Run locally
+## Run
 
-For a presentation, double-click **Start-Showcase.cmd**. It opens the local demo in your browser and keeps the server running in its terminal window.
-
-Requires Node.js 22.12+ (tested with Node 24).
+Double-click **Start-Showcase.cmd**, or use Node 22.12+:
 
 ```powershell
-cd "C:\Users\Hamza Malik\Desktop\lecviz\lecviz-showcase"
-npm install
+npm ci
 npm run dev
 ```
 
-Open **http://127.0.0.1:5173**. `npm run build` produces a static `dist/` folder; `npm run preview` serves the production build on port 4173. `npm test` runs the deterministic command/scene checks.
+Open **http://127.0.0.1:5173**. Production: `npm run build`, then `npm run preview`. Vercel uses the Vite build and `dist/` output declared in `vercel.json`. Pushing the connected Git branch triggers Vercel's configured deployment integration.
 
-## Showcase walkthrough
+## Demonstrations
 
-1. Start with **Bubble sort** and click **Play example**. The teacher speaks the first instruction, then the array appears as that instruction finishes. The next sentences drive comparisons and swaps.
-2. Choose **Zira** or **David** above the teacher. Both have bundled, offline narration. The avatar talks during audio playback; the current sentence is shown in large type. Pause/resume preserves audio position. Restart replays from an empty canvas. Space toggles playback and arrow keys step through history when focus is outside a control.
-3. Click **Arrays**, **Stacks**, **Queues**, or **Linked lists** for another prepared example.
-4. Click a suggested command or type one and press Enter. For example: `Create an array with 8, 3, 5`, `Swap the first two`, then `Highlight the largest number`.
-5. Try the microphone in a supported browser. Read the in-app consent notice and allow the browser prompt yourself. Speak one command at a time, using the same phrases shown under the canvas.
-6. Switch theme or fullscreen for a projector. Use **Transcript** for the completed sentences and **Commands** for clickable examples. The main screen keeps only the diagram, teacher, current sentence and controls.
+- **Classroom:** arrays, bubble sort, stacks, queues, and linked lists. Narrated operations update the diagram while the teacher speaks.
+- **System architecture:** reproduces the supplied diagram's layers, labels, and arrow directions. The valid-event walkthrough follows microphone → Whisper → intent parser → validation → scene manager → renderer → output. The uncertain-event walkthrough demonstrates rejection, withheld updates, teacher correction, revalidation, and safe application. Click a node to inspect its step. A moving packet and event inspector expose the current transcript, structured event, validation decision, and scene values.
+- **Beyond IT:** a water-cycle lesson demonstrates solar energy, evaporation, condensation, precipitation, runoff and infiltration. A rainfall graph then builds from explicitly illustrative values of 10, 30 and 20 mm. These are invented teaching data, not observations.
 
-## What is real and what is illustrative
+The architecture animation illustrates the proposed pipeline; it does not run a backend, Whisper, or an LLM. The current showcase is intentionally a playback experience. Microphone capture, typed commands, and command buttons have been removed.
 
-- Guided playback uses prepared text, generated speech, and predetermined actions. The audio clock drives the diagram: each operation appears at 68% of its spoken sentence, with the next sentence starting when the previous clip ends. Word emphasis is estimated from the audio position, not speech recognition or phoneme alignment. It does not record audio or call an AI model.
-- Two sets of 27 WAV clips were generated using the installed Microsoft David and Zira voices. They are bundled under `public/narration/` and work offline. The speaking mouth and waveform are illustrative animations active during actual audio playback. Pausing, changing templates/voices, or issuing a command stops the previous audio from updating the diagram.
-- Typed and finalized microphone commands are interpreted by a small local rule parser. They mutate the displayed scene immediately. This is not general natural-language understanding.
-- Browser speech recognition may send audio to the browser vendor's service, may need internet, and is not supported in all browsers. No local Whisper or Silero service is included. Microphone capture is opt-in and never starts automatically.
-- Invalid commands leave the current scene intact. Undo/redo is available through the previous/next controls. A new command after stepping backward starts a new history branch.
-- Live commands stop example narration. Replaying after custom commands restores the selected guided example. Changing example or stepping through history stops microphone recognition to avoid unexpected input.
-- Both themes are supported; the theme preference is the only data saved in localStorage. Transcripts and scene history exist only in the current page. No API credentials, backend, accounts, lecture storage, or measured performance claims.
-- All five examples, narration files, and visual assets work without external fonts, image services, or CDNs after dependencies are installed and the application is built. Microphone recognition is the exception to offline behavior.
+## Playback
+
+Choose **Aria** or **Guy**, then **Play example**. Both use bundled neural narration rather than desktop speech synthesis. Pause/resume keeps the audio position; restart begins at step one. Speed, mute, previous/next, step markers, transcript, light/dark themes, and fullscreen are available. Space and the arrow keys work when focus is outside a control.
+
+All 106 narration clips are bundled MP3 files. No TTS service or API key is needed when viewing the deployed demo. The generation script used Microsoft's online neural speech service through [edge-tts](https://github.com/rany2/edge-tts); only the public example scripts were sent. The deployed app sends no microphone audio and never requests microphone access.
+
+The audio playback clock drives progress. A classroom or science scene transition occurs at 68% of its sentence; architecture packets follow audio progress along the corresponding connection. The avatar's mouth and word emphasis are illustrative, not phoneme-aligned lip synchronization. All animation honors reduced-motion preferences. Changing tabs, examples or voices cancels old audio and invalidates its callbacks.
 
 ## Verification
 
-Production build and 16 automated checks pass: scene operations, all example commands, WAV asset coverage, 4.5:1 text contrast in both themes, and audio progress/pause/resume/cancellation/failure handling. Local HTTP checks confirm the page and narration files are served. Browser visual inspection and speaker output have not been verified by automation because Chrome access was denied earlier in this session.
+```powershell
+npm test
+npm run build
+```
 
-## Supported commands
+The checks cover deterministic scene operations, narration coverage and script hashes, contrast, playback/pause/cancellation/failure handling, architecture ordering and rejection behavior, illustrative rainfall values, and server-rendered UI controls. Server-side render tests are not a substitute for visual browser QA.
 
-| Example | Commands |
-| --- | --- |
-| Arrays / bubble sort | Create an array with 8, 3, 5; compare the first two; swap the second and third; highlight the largest number; insert 6 at position 2; delete the third element |
-| Stacks | Create a stack with 2, 4; push 8; pop; highlight the top |
-| Queues | Create a queue with 3, 5, 8; enqueue 2; dequeue; highlight the first element |
-| Linked lists | Create a linked list with 10, 20, 30; insert 15 after the first node; delete the second node; visit the last node |
+To regenerate narration after editing lesson scripts:
 
-Numbers are limited to eight elements in the range -999 to 999 for readable showcase diagrams. Spoken positions are one-based; explicit `index 0` is zero-based. Number words zero through twelve and twenty/thirty/forty/fifty are recognized individually; arbitrary spoken compound numbers are not supported. Repeated values need position-based highlighting.
+```powershell
+python -m pip install --target .tools/tts edge-tts mutagen
+node scripts/export-narration.mjs
+python scripts/generate-neural.py
+```
 
-## Source provenance
+Generation requires internet access. `.tools/` is ignored; only narration files and their manifest are deployed. Normal Vercel builds do not install or run Python. The generator verifies MP3 metadata, records text hashes, and reuses unchanged clips.
 
-Original source: sibling `mindstream/`, inspected at commit `d30af60`. `main.tsx`, TypeScript configuration, `theme.ts`, and `speech/useSpeechRecognition.ts` derive directly from that repository. The layout, `Controls`, `TranscriptPane`, and `ThoughtInput` are adapted for the LecViz showcase. SVG templates, example data, command validation and the demo timeline are new. The original repository is unchanged. Retain the original owner's permissions when redistributing adapted source; this prototype does not assign a new license to that source.
+## Source notes
 
-Speech API reference: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
+- UI foundation: sibling Mindstream repository, originally inspected at `d30af60`. Theme, canvas layout, controls and transcript presentation were adapted; new lessons, architecture animation, scene templates and playback controls belong to this showcase. Retain the original owner's permissions when redistributing adapted source.
+- Architecture: the diagram supplied by the user. Backend and frontend groups, nine blocks, numbered layers, rejection branch, dashed fix route, and control-to-manager arrow are preserved.
+- Water-cycle reference: [USGS Water Science School](https://www.usgs.gov/water-science-school/water-cycle).
+- No user audio, provider keys, or transcript history are stored. Only theme preference is kept in browser localStorage.

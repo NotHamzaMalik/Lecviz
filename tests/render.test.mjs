@@ -8,12 +8,19 @@ import { createServer } from 'vite';
 const server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: 'custom', logLevel: 'error' });
 after(() => server.close());
 
-test('the demo renders its three views without microphone or command-input controls', async () => {
+test('the demo renders its four views without microphone or command-input controls', async () => {
   const { default: App } = await server.ssrLoadModule('/src/App.tsx');
   const html = renderToStaticMarkup(createElement(App));
-  for (const label of ['Classroom', 'System architecture', 'Beyond IT', 'Aria', 'Guy']) assert.ok(html.includes(label));
+  for (const label of ['Classroom', 'System architecture', 'Product workflow', 'Beyond IT', 'Aria', 'Guy']) assert.ok(html.includes(label));
   assert.doesNotMatch(html, /Type a command|Use mic|Commands|Start microphone|<input|<textarea/);
   assert.match(html, /Play example/);
+});
+
+test('product workflow renders every supplied stage without voice controls', async () => {
+  const { ProductWorkflow } = await server.ssrLoadModule('/src/demo/ProductWorkflow.tsx');
+  const html = renderToStaticMarkup(createElement(ProductWorkflow));
+  for (const label of ['Teacher speaks', 'Live microphone audio', 'Silero VAD + Faster-Whisper', 'Detect speech and generate transcript', 'DeepSeek V4 Flash', 'Understand topic, intent, objects and actions', 'JSON validation + scene manager', 'Check correctness, resolve references, preserve state', 'Live animated visualization', 'React Flow / SVG / browser animations']) assert.ok(html.includes(label), label);
+  for (const unwanted of ['Example voice', 'Transcript', 'Play example']) assert.ok(!html.includes(unwanted), unwanted);
 });
 test('architecture renders all source-diagram labels and the current rejection state', async () => {
   const { ArchitectureDiagram, ArchitecturePayload } = await server.ssrLoadModule('/src/demo/ArchitectureDiagram.tsx');

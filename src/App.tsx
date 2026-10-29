@@ -14,15 +14,19 @@ import { ArchitectureDiagram, ArchitecturePayload } from './demo/ArchitectureDia
 import { WaterCycle } from './demo/WaterCycle';
 import { lessons, voices } from './demo/lessons';
 import type { ArchitectureNode, Lesson, LessonId } from './demo/lessons';
+import { ProductWorkflow } from './demo/ProductWorkflow';
 
-const tabs: { id: Lesson['kind']; label: string; icon: string }[] = [
+type View = Lesson['kind'] | 'workflow';
+const tabs: { id: View; label: string; icon: string }[] = [
   { id: 'classroom', label: 'Classroom', icon: 'book' },
   { id: 'architecture', label: 'System architecture', icon: 'flow' },
+  { id: 'workflow', label: 'Product workflow', icon: 'spark' },
   { id: 'science', label: 'Beyond IT', icon: 'sun' },
 ];
 
 export default function App() {
   const [selected, setSelected] = useState<LessonId>('bubble');
+  const [view, setView] = useState<View>('classroom');
   const lesson = lessons.find(item => item.id === selected)!;
   const remembered = useRef<Record<Lesson['kind'], LessonId>>({ classroom: 'bubble', architecture: 'architecture-valid', science: 'water' });
   const [cursor, setCursor] = useState(0);
@@ -49,7 +53,8 @@ export default function App() {
   const stop = () => { narrator.stop(); setSpeech(null); };
   const selectLesson = (id: LessonId) => {
     stop(); setCursor(0); setError(''); setSelected(id);
-    remembered.current[lessons.find(item => item.id === id)!.kind] = id;
+    const kind = lessons.find(item => item.id === id)!.kind;
+    remembered.current[kind] = id; setView(kind);
   };
   const move = (next: number) => { stop(); setError(''); setCursor(Math.max(0, Math.min(next, lesson.steps.length))); };
   const play = (restart = false) => {
@@ -95,17 +100,17 @@ export default function App() {
   return <div className="app">
     <header className="topbar">
       <a className="brand" href="#" onClick={event => { event.preventDefault(); selectLesson('bubble'); }} aria-label="LecViz home"><span className="brand-mark"><Icon name="layers" size={26} /></span>Lec<span className="accent">Viz</span></a>
-      <nav className="main-tabs" aria-label="Demonstration views">{tabs.map(tab => <button key={tab.id} className={lesson.kind === tab.id ? 'main-tab active' : 'main-tab'} aria-current={lesson.kind === tab.id ? 'page' : undefined} onClick={() => selectLesson(remembered.current[tab.id])}><Icon name={tab.icon} size={20} />{tab.label}</button>)}</nav>
+      <nav className="main-tabs" aria-label="Demonstration views">{tabs.map(tab => <button key={tab.id} className={view === tab.id ? 'main-tab active' : 'main-tab'} aria-current={view === tab.id ? 'page' : undefined} onClick={() => { if (tab.id === 'workflow') { stop(); setError(''); setView('workflow'); } else selectLesson(remembered.current[tab.id]); }}><Icon name={tab.icon} size={20} />{tab.label}</button>)}</nav>
       <button className="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle color theme" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}><Icon name={theme === 'light' ? 'moon' : 'sun'} size={23} /></button>
     </header>
     <main>
-      <div className="lesson-switcher">
+      {view !== 'workflow' && <div className="lesson-switcher">
         {lesson.kind === 'classroom' && <Controls selected={selected as Template} onSelect={selectLesson} />}
         {lesson.kind === 'architecture' && <div className="kind-picker" role="group" aria-label="Architecture path"><button className={`kind-btn ${selected === 'architecture-valid' ? 'kind-active' : ''}`} aria-pressed={selected === 'architecture-valid'} onClick={() => selectLesson('architecture-valid')}><Icon name="check" size={18} />Valid event</button><button className={`kind-btn ${selected === 'architecture-error' ? 'kind-active' : ''}`} aria-pressed={selected === 'architecture-error'} onClick={() => selectLesson('architecture-error')}><Icon name="shield" size={18} />Uncertain event</button></div>}
         {lesson.kind === 'science' && <div className="science-heading"><span className="science-badge"><Icon name="drop" size={20} />Earth science</span><span>Water cycle + rainfall</span></div>}
         <span className="lesson-mode">{lesson.kind === 'architecture' ? 'Illustrated pipeline' : 'Narrated example'}</span>
-      </div>
-      <section className={`classroom ${lesson.kind === 'architecture' ? 'architecture-mode' : ''} ${lesson.kind === 'science' ? 'science-mode' : ''} ${fullscreen ? 'is-fullscreen' : ''}`} ref={workspace} aria-label={`${lesson.title} demonstration`}>
+      </div>}
+      {view === 'workflow' ? <ProductWorkflow /> : <section className={`classroom ${lesson.kind === 'architecture' ? 'architecture-mode' : ''} ${lesson.kind === 'science' ? 'science-mode' : ''} ${fullscreen ? 'is-fullscreen' : ''}`} ref={workspace} aria-label={`${lesson.title} demonstration`}>
         <div className="canvas-panel">
           <div className="canvas-heading"><h1>{lesson.title}</h1><div className="canvas-tools"><span className={`status-pill ${active ? 'running' : ''}`}><i />{stateLabel}</span><button className="icon-button" title="Fullscreen" aria-label="Fullscreen classroom" onClick={toggleFullscreen}><Icon name="expand" size={23} /></button></div></div>
           <div className="canvas-wrap">
@@ -127,7 +132,7 @@ export default function App() {
           <button className="transcript-button" onClick={() => setTranscriptOpen(true)} disabled={cursor === 0}><Icon name="book" size={20} />Transcript</button>
         </div>
         <dialog ref={transcript} onCancel={() => setTranscriptOpen(false)} onClick={event => { if (event.target === event.currentTarget) setTranscriptOpen(false); }}><div className="modal-head"><h2>Transcript</h2><button className="icon-button" aria-label="Close transcript" onClick={() => setTranscriptOpen(false)}><Icon name="close" size={23} /></button></div><div className="transcript-history">{lesson.steps.slice(0, cursor).map((step, index) => <p key={index}><span>{index + 1}</span>{step.text}</p>)}</div></dialog>
-      </section>
+      </section>}
       {error && <div className="error-banner" role="alert"><Icon name="info" size={22} /><span>{error}</span><button className="icon-button" aria-label="Dismiss message" onClick={() => setError('')}><Icon name="close" size={20} /></button></div>}
     </main>
   </div>;
